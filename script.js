@@ -10,7 +10,7 @@ console.log(getComputerChoice()); // this will return either "rock", "paper", or
 
 function getHumanChoice() {
   const userInput = prompt("Please enter rock, paper, or scissors:");
-  return userInput.toLowerCase();
-}
 
-console.log(getHumanChoice()); // this will return the user's input in lowercase.
+// Step 4: Declare the players score variables
+let humanScore = 0;
+let computerScore = 0;
