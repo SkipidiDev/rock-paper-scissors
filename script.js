@@ -7,3 +7,10 @@ function getComputerChoice() {
 }
 
 console.log(getComputerChoice()); // this will return either "rock", "paper", or "scissors" randomly.
+
+function getHumanChoice() {
+  const userInput = prompt("Please enter rock, paper, or scissors:");
+  return userInput.toLowerCase();
+}
+
+console.log(getHumanChoice()); // this will return the user's input in lowercase.
