@@ -5,8 +5,6 @@ function getComputerChoice() {
   return choices[randomIndex];
 }
 
-console.log(getComputerChoice()); // this will return either "rock", "paper", or "scissors" randomly.
-
 // Step 3: Write the logic to get the human choice
 function getHumanChoice() {
   const userInput = prompt("Please enter rock, paper, or scissors:");
