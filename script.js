@@ -11,38 +11,40 @@ function getHumanChoice() {
   return userInput;
 } 
 
-// Step 4: Declare the players score variables
-let humanScore = 0;
-let computerScore = 0;
+// Step 6: Write the logic to play the entire game
+function playGame() {
 
-// Step 5: Write the logic to play a single round
-function playRound(humanChoice, computerChoice) {
+  // move playRound() and score varibles inside playGame() function
 
-  // make humanChoice and computerChoice case-insensitive
-  humanChoice = humanChoice.toLowerCase();
-  computerChoice = computerChoice.toLowerCase();
+    // Step 4: Declare the players score variables
+    let humanScore = 0;
+    let computerScore = 0;
 
-  // write the logic to determine the winner of the round
-    // Increment the humanScore or computerScore variable based on the round winner
-  if (humanChoice === computerChoice) {
-    console.log(`It's a tie! You both chose ${humanChoice} and ${computerChoice}`);
-  
-  } else if ((humanChoice === "rock" && computerChoice === "scissors") ||
-             (humanChoice === "paper" && computerChoice === "rock") ||
-             (humanChoice === "scissors" && computerChoice === "paper")) {
-              humanScore++; // increment human score
-              console.log(`You win! ${humanChoice} beats ${computerChoice}`);
+    // Step 5: Write the logic to play a single round
+    function playRound(humanChoice, computerChoice) {
 
-  } else {
-    computerScore++; // increment computer score
-    console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
-  }
+      // make humanChoice and computerChoice case-insensitive
+      humanChoice = humanChoice.toLowerCase();
+      computerChoice = computerChoice.toLowerCase();
 
+      // write the logic to determine the winner of the round
+        // Increment the humanScore or computerScore variable based on the round winner
+      if (humanChoice === computerChoice) {
+        console.log(`It's a tie! You both chose ${humanChoice} and ${computerChoice}`);
+      
+      } else if ((humanChoice === "rock" && computerChoice === "scissors") ||
+                (humanChoice === "paper" && computerChoice === "rock") ||
+                (humanChoice === "scissors" && computerChoice === "paper")) {
+                  humanScore++; // increment human score
+                  console.log(`You win! ${humanChoice} beats ${computerChoice}`);
+
+      } else {
+        computerScore++; // increment computer score
+        console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
+      }
+
+    }
+
+    const humanSelection = getHumanChoice();
+    const computerSelection = getComputerChoice();
 }
-
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
-
-playRound(humanSelection, computerSelection);
-
-
