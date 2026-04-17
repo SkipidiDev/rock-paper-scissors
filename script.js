@@ -48,13 +48,13 @@ function playGame() {
     const humanSelection = getHumanChoice();
     const computerSelection = getComputerChoice();
 
-    // play 5 rounds of the game
-    playRound(humanSelection, computerSelection);
-    playRound(humanSelection, computerSelection);
-    playRound(humanSelection, computerSelection);
-    playRound(humanSelection, computerSelection);
-    playRound(humanSelection, computerSelection);
-
+    // play 5 rounds of the game by calling playRound()
+    playRound(getHumanChoice(), getComputerChoice());
+    playRound(getHumanChoice(), getComputerChoice());
+    playRound(getHumanChoice(), getComputerChoice());
+    playRound(getHumanChoice(), getComputerChoice());
+    playRound(getHumanChoice(), getComputerChoice());
+    
 }
 
 // call the playGame() to start the game
